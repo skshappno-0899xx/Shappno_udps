@@ -74,7 +74,7 @@ atexit.register(_stop_api_process)
 
 # ==================== CONFIGURATION ====================
 WEB_HOST = "0.0.0.0"
-WEB_PORT = 20248
+WEB_PORT = int(os.environ.get("PORT", 20248))
 ACCOUNTS_FILE = "accounts.json"
 TOKEN_CACHE_FILE = "token_cache.json"
 DEVICES_FILE = "devices.json"
